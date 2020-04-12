@@ -1,5 +1,200 @@
-.testing {
-    width: 25px;
-    background: yellow;
-    height: 25px;
+html,
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-auto-rows: repeat(3, 1fr);
+    grid-template-areas: 'h''m''f';
+    height: 100%;
+    width: 100%;
+}
+
+.main-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-image: url('../images/main-banner-mad-max.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    height: 90vh;
+    padding: 0px 15%;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: -webkit-xxx-large;
+        color: #FFFFFF;
+        width: 60%;
+    }
+
+    &__trailer {
+        background-color: #E4BB23;
+        text-decoration: none;
+        color: #F2F2F2;
+        width: 14%;
+        padding: 1.5%;
+        border: solid 1px transparent;
+        border-radius: 38px;
+
+        &:hover {
+            background-color: #BC9A1D;
+        }
+
+        .fa-play-circle {
+            color: #000000;
+            padding-left: 8px;
+            font-size: larger;
+
+        }
+    }
+
+    &__categories {
+        margin-bottom: 20px;
+
+        a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #F2F2F2;
+            font-variant: all-small-caps;
+
+
+            &:hover {
+                color: #E4BB23;
+            }
+        }
+    }
+
+    &__comments {
+        color: #E4BB23;
+
+        p {
+            &:first-child {
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
+header {
+    grid-area: h;
+}
+
+main {
+    grid-area: m;
+    background-color: #F2F2F2;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    padding: 0px;
+
+    &__item--logo {
+        padding-right: 12%;
+    }
+
+    &__item {
+
+        color: #FFFFFF;
+
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover {
+                color: #DCB725;
+            }
+
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+            border-radius: 25px;
+        }
+
+        &:last-child {
+            display: flex;
+            align-items: center;
+            padding-left: 12%;
+
+            img {
+                margin-right: 15px;
+            }
+        }
+
+
+    }
+}
+
+.content {
+    &__nav {
+        display: flex;
+        justify-content: space-evenly;
+        font-variant: all-small-caps;
+        font-weight: bold;
+        color: #E4BD2A;
+        padding: 0px 25%;
+        margin: 22px;
+    }
+
+    &__item {
+        list-style: none;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: center;
+        flex-flow: wrap;
+
+        .card-box {
+            background-color: #FFFFFF;
+
+            img {
+                width: 186px;
+            }
+
+            &__likes {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                p {
+                    font-weight: bold;
+                }
+
+                .fa-heart {
+                    color: #CCCCCC;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 13.5%;
+    align-items: center;
+    grid-area: f;
+
+    i {
+        font-size: 1.5rem;
+        color: #BABABA;
+        margin-left: 20px;
+    }
 }
