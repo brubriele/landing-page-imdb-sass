@@ -182,7 +182,7 @@ main {
         .card-box {
             background-color: #FFFFFF;
             box-shadow: 0 7px 16px -15px black;
-            border: solid 1px transparent;
+            border: solid 1px thin;
             border-radius: 15px;
             margin: 20px;
 
@@ -195,13 +195,16 @@ main {
 
             &__footer {
                 padding: 10px;
+                height: 80px;
 
                 h3 {
                     font-size: 14px;
+                    margin: 0px auto;
                 }
 
                 p {
                     color: #E4BB23;
+                    margin: 7px 0px;
                 }
             }
 
