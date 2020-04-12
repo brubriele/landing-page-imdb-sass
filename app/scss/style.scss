@@ -152,8 +152,26 @@ main {
         margin: 22px;
     }
 
+    hr {
+        width: 77%;
+        height: 1px;
+        color: #DFDFDF;
+        background-color: #DFDFDF;
+        border: none;
+    }
+
     &__item {
         list-style: none;
+
+        a {
+            color: #E4BD2A;
+            text-decoration: none;
+
+            &:hover {
+                padding-bottom: 22px;
+                border-bottom: 1px solid;
+            }
+        }
     }
 
     &__cards {
@@ -163,15 +181,40 @@ main {
 
         .card-box {
             background-color: #FFFFFF;
+            box-shadow: 0 7px 16px -15px black;
+            border: solid 1px transparent;
+            border-radius: 15px;
+            margin: 20px;
 
             img {
-                width: 186px;
+                width: 230px;
+                height: 344px;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
             }
+
+            &__footer {
+                padding: 10px;
+
+                h3 {
+                    font-size: 14px;
+                }
+
+                p {
+                    color: #E4BB23;
+                }
+            }
+
 
             &__likes {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+
+                .rate {
+                    color: #000000;
+                }
+
 
                 p {
                     font-weight: bold;
@@ -179,6 +222,11 @@ main {
 
                 .fa-heart {
                     color: #CCCCCC;
+
+                    &:hover {
+                        color: #E74C3C;
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -192,9 +240,37 @@ footer {
     align-items: center;
     grid-area: f;
 
+    .social-medias {
+
+        a {
+            text-decoration: none;
+
+            .fa-twitter {
+                &:hover {
+                    color: #55ACEE;
+                }
+            }
+
+            .fa-facebook-square {
+                &:hover {
+                    color: #3B5998;
+                }
+            }
+
+            .fa-instagram {
+                &:hover {
+                    color: #e95950;
+                }
+            }
+
+        }
+    }
+
     i {
         font-size: 1.5rem;
         color: #BABABA;
         margin-left: 20px;
+
+
     }
 }
