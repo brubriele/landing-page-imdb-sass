@@ -142,6 +142,8 @@ main {
 }
 
 .content {
+    padding: 0px 90px;
+
     &__nav {
         display: flex;
         justify-content: space-evenly;
@@ -184,13 +186,56 @@ main {
             box-shadow: 0 7px 16px -15px black;
             border: solid 1px thin;
             border-radius: 15px;
-            margin: 20px;
+            margin: 30px 5px;
+            position: relative;
+            display: inline-block;
+
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 230px;
+                height: 344px;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                background-color: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                transition: all 0.2s ease-in-out;
+                border-bottom: solid 3px black;
+            }
+
+            &:hover::before {
+                opacity: 0.23;
+            }
+
 
             img {
                 width: 230px;
                 height: 344px;
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
+
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-image: url(http://bridgeditalia.it/wp-content/uploads/2014/07/over.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    opacity: 0;
+                    transition: opacity .5s ease;
+                }
+
+                &:hover {
+                    border: solid 1px red;
+                    -ms-grid-layer: fs-base-font-size;
+                }
             }
 
             &__footer {
@@ -216,6 +261,8 @@ main {
 
                 .rate {
                     color: #000000;
+                    font-size: 1.2em;
+                    font-weight: bold;
                 }
 
 
@@ -232,6 +279,10 @@ main {
                     }
                 }
             }
+        }
+
+        .card-box>img {
+            vertical-align: middle;
         }
     }
 }
