@@ -1,0 +1,231 @@
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif; }
+
+.container {
+  display: grid;
+  grid-auto-rows: repeat(3, 1fr);
+  grid-template-areas: "h" "m" "f";
+  height: 100%;
+  width: 100%; }
+
+.main-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-image: url("../images/main-banner-mad-max.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 90vh;
+  padding: 0px 15%; }
+  .main-banner__content {
+    display: flex;
+    flex-direction: column; }
+  .main-banner__title {
+    font-weight: 900;
+    font-size: -webkit-xxx-large;
+    color: #FFFFFF;
+    width: 60%; }
+  .main-banner__trailer {
+    background-color: #E4BB23;
+    text-decoration: none;
+    color: #F2F2F2;
+    width: 14%;
+    padding: 1.5%;
+    border: solid 1px transparent;
+    border-radius: 38px; }
+    .main-banner__trailer:hover {
+      background-color: #BC9A1D; }
+    .main-banner__trailer .fa-play-circle {
+      color: #000000;
+      padding-left: 8px;
+      font-size: larger; }
+  .main-banner__categories {
+    margin-bottom: 20px; }
+    .main-banner__categories a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #F2F2F2;
+      font-variant: all-small-caps; }
+      .main-banner__categories a:hover {
+        color: #E4BB23; }
+  .main-banner__comments {
+    color: #E4BB23; }
+    .main-banner__comments p:first-child {
+      color: #FFFFFF; }
+
+header {
+  grid-area: h; }
+
+main {
+  grid-area: m;
+  background-color: #F2F2F2; }
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+  padding: 0px; }
+  .list__item--logo {
+    padding-right: 12%; }
+  .list__item {
+    color: #FFFFFF; }
+    .list__item a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: bold; }
+      .list__item a:hover {
+        color: #DCB725; }
+    .list__item img {
+      width: 32px;
+      height: 32px;
+      border-radius: 25px; }
+    .list__item:last-child {
+      display: flex;
+      align-items: center;
+      padding-left: 12%; }
+      .list__item:last-child img {
+        margin-right: 15px; }
+
+.content {
+  padding: 0px 90px; }
+  .content__nav {
+    display: flex;
+    justify-content: space-evenly;
+    font-variant: all-small-caps;
+    font-weight: bold;
+    color: #E4BD2A;
+    padding: 0px 25%;
+    margin: 22px; }
+  .content hr {
+    width: 77%;
+    height: 1px;
+    color: #DFDFDF;
+    background-color: #DFDFDF;
+    border: none; }
+  .content__item {
+    list-style: none; }
+    .content__item a {
+      color: #E4BD2A;
+      text-decoration: none; }
+      .content__item a:hover {
+        padding-bottom: 22px;
+        border-bottom: 1px solid; }
+  .content__cards {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap; }
+    .content__cards .card-box {
+      background-color: #FFFFFF;
+      box-shadow: 0 7px 16px -15px black;
+      border: solid 1px thin;
+      border-radius: 15px;
+      margin: 30px 5px;
+      position: relative;
+      display: inline-block; }
+      .content__cards .card-box::before {
+        display: inline-block;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 230px;
+        height: 344px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+        border-bottom: solid 3px black; }
+      .content__cards .card-box__mask {
+        visibility: hidden;
+        position: absolute;
+        top: 26%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .content__cards .card-box__mask::before {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 230px;
+          height: 344px;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          background-color: rgba(0, 0, 0, 0.5);
+          opacity: 0;
+          transition: all 0.2s ease-in-out;
+          border-bottom: solid 3px black; }
+        .content__cards .card-box__mask:hover::before {
+          display: inline-block;
+          opacity: 0.23; }
+        .content__cards .card-box__mask h3 {
+          color: #e4bb23;
+          font-size: larger;
+          line-height: 1em; }
+        .content__cards .card-box__mask .fa-play {
+          font-size: 2rem;
+          color: #fff; }
+          .content__cards .card-box__mask .fa-play:hover {
+            color: #e4bb23; }
+      .content__cards .card-box:hover::before {
+        opacity: 0.23; }
+      .content__cards .card-box:hover > .card-box__mask {
+        visibility: visible; }
+      .content__cards .card-box img {
+        width: 230px;
+        height: 344px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px; }
+      .content__cards .card-box__footer {
+        padding: 10px;
+        height: 80px; }
+        .content__cards .card-box__footer h3 {
+          font-size: 14px;
+          margin: 0px auto; }
+        .content__cards .card-box__footer p {
+          color: #E4BB23;
+          margin: 7px 0px; }
+      .content__cards .card-box__likes {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .content__cards .card-box__likes .rate {
+          color: #000000;
+          font-size: 1.2em;
+          font-weight: bold; }
+        .content__cards .card-box__likes p {
+          font-weight: bold; }
+        .content__cards .card-box__likes .fa-heart {
+          color: #CCCCCC; }
+          .content__cards .card-box__likes .fa-heart:hover {
+            color: #E74C3C;
+            cursor: pointer; }
+    .content__cards .card-box > img {
+      vertical-align: middle; }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 13.5%;
+  align-items: center;
+  grid-area: f; }
+  footer .social-medias a {
+    text-decoration: none; }
+    footer .social-medias a .fa-twitter:hover {
+      color: #55ACEE; }
+    footer .social-medias a .fa-facebook-square:hover {
+      color: #3B5998; }
+    footer .social-medias a .fa-instagram:hover {
+      color: #e95950; }
+  footer i {
+    font-size: 1.5rem;
+    color: #BABABA;
+    margin-left: 20px; }
